@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lindimbewu Day Care</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-image: url(images/3.jpg); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: linear-gradient(to right, #ffcc00, #ffaa33);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin: 0 15px;
+        }
+
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url(images/2.jpg) no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.879);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 8px 8px 5px rgb(0, 0, 0);
+        }
+
+        .hero button:hover {
+            background-color: #003d80;
+            transform: scale(1.1);
+            box-shadow: 5px 5px 5px #0056b3;
+        }
+
+        /* About Section */
+        #about {
+            background: url(images/1.jpg) no-repeat center center/cover;
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+            text-shadow: 12px 12px 12px black;
+        }
+
+        #about h2 {
+            color: black;
+        }
+    
+
+        /* Services Section */
+        #services .service-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: url(images/4.jpg) no-repeat center center/cover;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            height: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Testimonials Section */
+        #testimonials .testimonial-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .testimonial {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: url(images/6.jpg) no-repeat center center/cover;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        #contact form input, #contact form textarea {
+            width: 100%;
+            max-width: 400px;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #contact form button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        #contact form button:hover {
+            background-color: #003d80;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #About{
+        text-shadow: 12px 12px 12px black ;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Lindimbewu Daycare</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" style="background-image: url('images/2.jpg');" alt="Smiling children playing in a park">
+        <h1>Welcome to Lindimbewu Daycare</h1>
+        <p>Where learning and fun come together!</p>
+        <button>Learn More</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about" style="background-image: url('images/1.jpg');" alt="Children's playground with slides and swings">
+        <h2>About Us</h2>
+        <p>At our daycare, we are committed to creating a nurturing, safe, and engaging environment where your little ones can thrive. Our goal is to provide a space where children feel loved, supported, and encouraged to explore their world. Through carefully planned activities and a warm, welcoming atmosphere, we ensure that each child’s unique needs are met while fostering their creativity, curiosity, and confidence. With dedicated caregivers and a focus on safety and growth, we strive to make every day a joyful and enriching experience for your child.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card" style="background-image: url('images/4.jpg');" alt="Cozy infant care environment">
+                <h3>Infant Care</h3>
+                <p>Safe and cozy environment for babies aged 0-12 months.</p>
+            </div>
+            <div class="card" style="background-image: url('images/4.jpg');" alt="Fun preschool activities">
+                <h3>Preschool</h3>
+                <p>Fun and educational activities for kids aged 3-5 years.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Parents Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial">
+                <p>"Lindimbewu Daycare has been a blessing!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-image: url('images/6.jpg');" alt="Contact us banner">
+        <h2>Contact Us</h2>
+       
+        <form action="" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+[_{{{CITATION{{{_1{](https://github.com/buribalazs/smooth-drag-order/tree/7b40d21d076c3e31765f61481f537beaf4c5ec9f/README.md)[_{{{CITATION{{{_2{](https://github.com/deepu-g-nair/my-website/tree/0f6eddf8d79d2a23d5c76b86ae3bdc1dffd10650/src%2Fcomponents%2Fhome%2FHome.js)[_{{{CITATION{{{_3{](https://github.com/shivendrakmr05/blossom/tree/ad523cff6e9f1be73949ee9fc815f5ae8751e73e/equipment.php)[_{{{CITATION{{{_4{](https://github.com/ringkubd/portofolio_codeigniter/tree/d1cc93c845986894c68a94dd82cca52df9edae21/application%2Fviews%2Fportofolio%2Finc%2Fheader.php)[_{{{CITATION{{{_5{](https://github.com/heshanmax/extremtravel/tree/29fcbd90e8b213de94d5d84fa6dda2881bceee5f/storage%2Fframework%2Fviews%2F1783ef25de7f51a37157ecf3e9a918f67c0ca99c.php)
